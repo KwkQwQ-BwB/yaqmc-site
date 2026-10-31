@@ -1,0 +1,41 @@
+diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
+index 131298b..e486bc1 100644
+--- a/.github/workflows/pages.yml
++++ b/.github/workflows/pages.yml
+@@ -11,6 +11,11 @@ on:
+       - 'docs/**'
+       - 'README*.md'
+       - 'scripts/build-pages.mjs'
++      - 'src/**'
++      - 'public/**'
++      - 'vite.config.ts'
++      - 'vite.demo.config.ts'
++      - 'package-lock.json'
+       - 'scripts/check-public-docs.mjs'
+       - '.github/workflows/pages.yml'
+   workflow_dispatch:
+diff --git a/package.json b/package.json
+index 5b9e7c4..6e45674 100644
+--- a/package.json
++++ b/package.json
+@@ -34,7 +34,7 @@
+     "plugin:verify:provider-platform-example": "npm run plugin:pack:provider-platform-example && cargo test -p yaqmc-core --test plugin_provider_example complete_platform_component_exercises_capabilities_and_lifecycle -- --exact",
+     "plugin:validate": "node scripts/validate-example-plugins.mjs",
+     "plugin:pack": "npm run plugin:build && npm run plugin:validate && node scripts/pack-example-plugins.mjs",
+-    "pages:build": "node scripts/build-pages.mjs",
++    "pages:build": "node scripts/build-pages.mjs && vite build -c vite.demo.config.ts",
+     "format": "prettier --write .",
+     "format:check": "prettier --check .",
+     "check": "npm run docs:check && npm run lint && npm run test && npm run build",
+diff --git a/tsconfig.node.json b/tsconfig.node.json
+index 70dd5a9..7e5daad 100644
+--- a/tsconfig.node.json
++++ b/tsconfig.node.json
+@@ -15,6 +15,7 @@
+   },
+   "include": [
+     "vite.config.ts",
++    "vite.demo.config.ts",
+     "playwright.config.ts",
+     "playwright.electron.config.ts",
+     "e2e/**/*.ts",

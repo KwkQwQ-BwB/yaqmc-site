@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Keep your favorite songs close, from your desktop to the screen in your pocket. An open-source, unofficial QQ Music client for Windows, Linux and Android."
+    />
+    <meta name="theme-color" content="#11120f" />
+    <title>YAQMC — Music and lyrics, in good company</title>
+    <link rel="icon" href="../assets/yaqmc-logo.png" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="alternate" hreflang="zh-CN" href="../" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="./" aria-label="YAQMC"
+        ><img src="../assets/yaqmc-logo.png" width="32" height="32" alt="" />YAQMC</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#demo">Demo</a><a href="#download">Download</a><a href="#plugins">Plugins</a
+        ><a href="#resources">Docs</a><a class="language" href="../" lang="zh-CN">中文</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <a class="release-label" href="https://github.com/YAQMC/YAQMC/releases/tag/v0.1.0"
+          ><span class="status-dot" aria-hidden="true"></span>v0.1.0 is here ↗</a
+        >
+        <p class="eyebrow">Yet Another Q Music Client</p>
+        <h1 id="hero-title">Your music. <em>Every word.</em></h1>
+        <p class="lead">
+          Keep your favorite songs close, from your desktop to the screen in your pocket. An
+          open-source, unofficial QQ Music client for Windows, Linux and Android.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#download">Get YAQMC ↓</a
+          ><a class="button" href="https://github.com/YAQMC/YAQMC">View source ↗</a>
+        </div>
+      </section>
+
+      <section class="stage wrap" id="demo" aria-labelledby="demo-title">
+        <div class="window">
+          <div class="window-bar">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <h2 id="demo-title">Live demo · synthetic music</h2>
+            <a href="../demo/?provider=fake&amp;autoplay" target="_blank" rel="noopener"
+              >Full screen ↗</a
+            >
+          </div>
+          <div class="window-body">
+            <iframe
+              src="../demo/?provider=fake&amp;autoplay"
+              title="Interactive YAQMC app running on synthetic demo data"
+            ></iframe>
+          </div>
+        </div>
+        <ul class="try" aria-label="Things to try">
+          <li><b>▶</b>Press play on any track</li>
+          <li><b>♪</b>Open lyrics from the player bar</li>
+          <li><b>⌘K</b>Search the catalog</li>
+          <li><b>⚙</b>Settings → Appearance</li>
+        </ul>
+        <p class="stage-note">
+          This is the real YAQMC interface, built from this repository and running in your browser
+          on made-up songs. No sound plays and no account is used.
+        </p>
+      </section>
+
+      <section class="section wrap" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">Made for listening</p>
+          <h2 id="features-title">A song to play.<br />Words to stay with.</h2>
+          <p>
+            Playback, lyrics and your library, together. A different view needn't interrupt the
+            music.
+          </p>
+        </div>
+        <div class="bento">
+          <article class="tile tile-lyrics">
+            <span class="index">02 / Lyrics</span>
+            <div class="karaoke" aria-hidden="true" lang="zh-CN">
+              <p class="line done">
+                折一束晨光放在窗前<small>Zhé yī shù chénguāng fàng zài chuāngqián</small
+                ><small lang="en">Fold a ray of morning light beside the window</small>
+              </p>
+              <p class="line now">
+                <span>让今天慢一点出现</span><small>Ràng jīntiān màn yīdiǎn chūxiàn</small
+                ><small lang="en">Let today arrive a little more slowly</small>
+              </p>
+              <p class="line">我们把影子留给昨天</p>
+            </div>
+            <h3>Words, wherever you listen</h3>
+            <p>
+              Word-by-word lyrics, translations and romanization follow the music. Desktop builds
+              also offer lyric overlays and Lyrics Island; use the system tray to unlock them.
+            </p>
+            <a class="text-link" href="https://github.com/YAQMC/YAQMC/blob/main/docs/lyrics.md"
+              >Explore lyrics ↗</a
+            >
+          </article>
+          <article class="tile">
+            <span class="index">01 / Playback</span>
+            <div class="queue" aria-hidden="true">
+              <img src="../demo/artwork/afterglow.svg" alt="" /><img
+                src="../demo/artwork/tide.svg"
+                alt=""
+              /><img src="../demo/artwork/orbit.svg" alt="" />
+            </div>
+            <h3>A rhythm of its own</h3>
+            <p>
+              A Rust playback service keeps your queue, progress and quality in sync. Sources depend
+              on account rights and platform availability, without bypassing membership or copyright
+              restrictions.
+            </p>
+            <a
+              class="text-link"
+              href="https://github.com/YAQMC/YAQMC/blob/main/docs/audio-quality.md"
+              >Explore audio quality ↗</a
+            >
+          </article>
+          <article class="tile">
+            <span class="index">03 / Library</span>
+            <div class="shelf" aria-hidden="true">
+              <img src="../demo/artwork/glasshouse.svg" alt="" /><img
+                src="../demo/artwork/sunroom.svg"
+                alt=""
+              /><img src="../demo/artwork/night-drive.svg" alt="" /><img
+                src="../demo/artwork/daybreak.svg"
+                alt=""
+              />
+            </div>
+            <h3>Follow a favorite further</h3>
+            <p>
+              Search songs, artists and albums, then follow the connections between them. Sign in to
+              access your account library, and use share links to pick up your next listen.
+            </p>
+            <a
+              class="text-link"
+              href="https://github.com/YAQMC/YAQMC/blob/main/docs/account-library.md"
+              >Explore your library ↗</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="download" aria-labelledby="download-title">
+        <div class="section-heading">
+          <p class="eyebrow">Start listening / v0.1.0</p>
+          <h2 id="download-title">Pick your device.<br />Bring your music.</h2>
+          <p>
+            Choose your operating system and processor. Every download comes from this project's
+            GitHub Release.
+          </p>
+        </div>
+        <div class="download-grid">
+          <article class="download-card">
+            <span class="os-mark">WIN</span>
+            <h3>Windows</h3>
+            <p>Setup / Portable · x64 / arm64</p>
+            <a
+              class="button primary"
+              href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-windows-x64-setup.exe"
+              >Get x64 installer ↓</a
+            >
+            <div class="alternative">
+              <a
+                href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-windows-x64-portable.exe"
+                >x64 portable</a
+              ><a
+                href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-windows-arm64-setup.exe"
+                >arm64 installer</a
+              >
+            </div>
+            <p class="package-note">
+              Not code-signed. Windows may show an unknown-publisher or SmartScreen warning.
+            </p>
+          </article>
+          <article class="download-card">
+            <span class="os-mark">LINUX</span>
+            <h3>Linux</h3>
+            <p>AppImage / deb / rpm / tar.gz</p>
+            <a
+              class="button primary"
+              href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-linux-x64.AppImage"
+              >x64 AppImage ↓</a
+            >
+            <div class="alternative">
+              <a href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-linux-x64.deb"
+                >x64 deb</a
+              ><a
+                href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-linux-arm64.AppImage"
+                >arm64 AppImage</a
+              >
+            </div>
+            <p class="package-note">
+              Not code-signed. See the Linux guide for Wayland and desktop-environment
+              compatibility.
+              <a href="https://github.com/YAQMC/YAQMC/blob/main/docs/linux.md">Guide ↗</a>
+            </p>
+          </article>
+          <article class="download-card">
+            <span class="os-mark">ANDROID</span>
+            <h3>Android</h3>
+            <p>Android 8.0+ · arm64-v8a</p>
+            <a
+              class="button primary"
+              href="https://github.com/YAQMC/YAQMC/releases/download/v0.1.0/YAQMC-android-arm64-v8a-v0.1.0.apk"
+              >Get APK ↓</a
+            >
+            <div class="alternative">
+              <a href="https://github.com/YAQMC/YAQMC/blob/main/docs/android.md"
+                >Installation guide</a
+              >
+            </div>
+            <p class="package-note">
+              Signed APK with phone and tablet layouts. No desktop lyric overlays, plugins or Local
+              API in this version.
+            </p>
+          </article>
+        </div>
+        <div class="download-footnote">
+          <p>
+            Check the SHA-256 files in the Release before installing. Checksums detect corruption;
+            they do not independently verify the publisher. Desktop auto-update feeds are currently
+            x64 only.
+          </p>
+          <a class="text-link" href="https://github.com/YAQMC/YAQMC/releases/tag/v0.1.0"
+            >All packages & release notes ↗</a
+          >
+        </div>
+      </section>
+
+      <section class="section wrap plugin-section" id="plugins" aria-labelledby="plugins-title">
+        <div class="plugin-copy">
+          <p class="eyebrow">Make room for your ideas</p>
+          <h2 id="plugins-title">A player with<br />your own touches.</h2>
+          <p>
+            Extend the desktop app with styles, lyric scenes or platform components. Download a
+            .yaqmc-plugin file, then install and review its permissions in Settings → Plugins.
+          </p>
+          <p class="muted">
+            Examples are disabled by default and are unverified local sideloads, not a marketplace.
+            Platform examples use synthetic data, not a real music service.
+          </p>
+          <a
+            class="text-link"
+            href="https://github.com/YAQMC/YAQMC/blob/main/docs/plugin-development.md"
+            >Build a plugin ↗</a
+          >
+        </div>
+        <div class="plugin-list">
+          <a href="../plugins/dev.yaqmc.example.studio-1.0.0.yaqmc-plugin" download
+            ><span class="plugin-swatch studio" aria-hidden="true">S</span
+            ><span
+              ><strong>Studio</strong
+              ><small>A style, two lyric scenes and a bookmark script</small></span
+            ><span aria-hidden="true">↓</span></a
+          ><a href="../plugins/dev.yaqmc.example.sakura-1.0.0.yaqmc-plugin" download
+            ><span class="plugin-swatch sakura" aria-hidden="true">S</span
+            ><span
+              ><strong>Sakura</strong
+              ><small>A little pink for the sidebar, player and queue</small></span
+            ><span aria-hidden="true">↓</span></a
+          ><a href="../plugins/dev.yaqmc.example.night-1.0.0.yaqmc-plugin" download
+            ><span class="plugin-swatch night" aria-hidden="true">N</span
+            ><span
+              ><strong>Night</strong
+              ><small>Cool-toned chrome; mutually exclusive with Sakura</small></span
+            ><span aria-hidden="true">↓</span></a
+          >
+          <details>
+            <summary>More examples</summary>
+            <div class="extra-plugins">
+              <a href="../plugins/dev.yaqmc.example.scenes-1.0.0.yaqmc-plugin" download>scenes ↓</a
+              ><a href="../plugins/dev.yaqmc.example.now-playing-1.0.0.yaqmc-plugin" download
+                >now-playing ↓</a
+              ><a href="../plugins/dev.yaqmc.example.ink-core-1.0.0.yaqmc-plugin" download
+                >ink-core ↓</a
+              ><a href="../plugins/dev.yaqmc.example.ink-accent-1.0.0.yaqmc-plugin" download
+                >ink-accent ↓</a
+              ><a href="../plugins/dev.yaqmc.example.catalog-1.0.0.yaqmc-plugin" download
+                >catalog ↓</a
+              ><a href="../plugins/dev.yaqmc.example.platform-1.0.0.yaqmc-plugin" download
+                >platform ↓</a
+              >
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="resources wrap" id="resources" aria-labelledby="resources-title">
+        <div>
+          <p class="eyebrow">Open source / open ideas</p>
+          <h2 id="resources-title">Use it. Understand it.<br />Help shape it.</h2>
+        </div>
+        <div class="resource-links">
+          <a href="https://github.com/YAQMC/YAQMC/blob/main/docs/README.md">User documentation ↗</a
+          ><a href="https://github.com/YAQMC/YAQMC/blob/main/CONTRIBUTING-EN.md">Contribute ↗</a
+          ><a href="https://github.com/YAQMC/YAQMC/issues/new/choose">Report an issue ↗</a>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="./"
+          ><img src="../assets/yaqmc-logo.png" width="28" height="28" alt="" />YAQMC</a
+        >
+        <p>Yet Another Q Music Client</p>
+        <div class="footer-links">
+          <a href="https://github.com/YAQMC/YAQMC">GitHub</a
+          ><a href="https://github.com/YAQMC/YAQMC/blob/main/SECURITY-EN.md">Security</a
+          ><a href="https://github.com/YAQMC/YAQMC/blob/main/ACKNOWLEDGEMENTS-EN.md">Credits</a>
+        </div>
+      </div>
+      <p class="legal">
+        An unofficial project, not affiliated with Tencent or QQ Music. No bypass of membership,
+        regional, copyright or account restrictions. Availability depends on the platform, account
+        and environment.
+      </p>
+    </footer>
+    <script>
+      // Below 1024px, render the app at desktop size and scale it down to fit the window.
+      const body = document.querySelector('.window-body');
+      const frame = body.querySelector('iframe');
+      new ResizeObserver(([entry]) => {
+        const { width, height } = entry.contentRect;
+        const scale = Math.min(1, width / 1024);
+        frame.style.width = `${width / scale}px`;
+        frame.style.height = `${height / scale}px`;
+        frame.style.transform = `scale(${scale})`;
+      }).observe(body);
+    </script>
+  </body>
+</html>
