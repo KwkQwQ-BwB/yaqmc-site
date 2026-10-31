@@ -2,7 +2,7 @@
 
 A proposed redesign of the [YAQMC](https://github.com/YAQMC/YAQMC) project website, kept here until it is ready to send upstream as a pull request. This is an unofficial preview, not the project's site.
 
-The page is built around the real app: the YAQMC renderer is compiled in its offline fake-provider mode and embedded live, already playing a fixture song with lyrics open. All songs, artists, artwork and lyrics in the demo are the synthetic fixtures that ship in the YAQMC repository. The site's colors and type come from the app's own `src/styles/tokens.css`.
+The whole page is the real YAQMC lyrics view. The renderer is compiled in its offline fake-provider mode and embedded full screen, playing a song written for this page: a tour of the app's features sung to the public-domain tune of Twinkle, Twinkle, Little Star, with Chinese lyrics, pinyin and English translation, timed word by word. A small Web Audio synth plays the melody in step with the player once a visitor turns sound on. Everything else in the demo is the synthetic fixture data that ships in YAQMC. The page's colors and type come from the app's own `src/styles/tokens.css`.
 
 ## Layout
 
@@ -11,7 +11,8 @@ Every file sits at the same path it will have in YAQMC, so the pull request is a
 | Path | What it is |
 | --- | --- |
 | `site/` | The bilingual landing page (`index.html` zh-CN, `en/index.html`, `styles.css`) |
-| `src/development/website-demo.tsx` | Demo entry: the fake app, auto-playing with `?autoplay` |
+| `src/development/website-demo.tsx` | Demo entry: the fake app plus the demo song, auto-playing with `?autoplay`, and the melody synth |
+| `src/development/website-song.ts` | The demo song: melody, word timings, lyrics, pinyin and translation (with a test) |
 | `vite.demo.config.ts` | Builds that entry into `dist/pages/demo` with relative asset paths |
 | `scripts/build-pages.mjs` | Existing Pages build, now also copies the app's design tokens |
 | `upstream.patch` | The small edits to `package.json`, `tsconfig.node.json` and `pages.yml` for the PR |
